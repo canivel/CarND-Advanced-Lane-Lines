@@ -22,7 +22,6 @@ The goal of this project is to detect lane using images taken from front-camera.
 [image6]: ./examples/radcurve.png "Calculate Radius of Curvature"
 [image7]: ./examples/example_output.png "Output"
 [video1]: ./result.mp4 "Video 1"
-[video2]: ./challenge_result.mp4 "Video 2"
 
 
 ---
@@ -41,7 +40,6 @@ I used `cv2.calibrateCamera` to correct these types of distortion. It returned t
 
 #### 2. Create binary image
 I extracted saturation channel from HSL image, and red channel from BGR image. Then, I use `cv2.GaussianBlur` and horizontal `cv2.Sobel` filter, which is more resistant to noise, to find the edges.  All the outputs were then combined to enhance the detection power. Here's an example of my output for this step.
-![alt text][image3]
 
 #### 3. Perform perspective transformation
 
@@ -72,7 +70,7 @@ I calculated the radius of curvature of the lane based on the following formula
 
 #### 6. Provide an example image of the result plotted back down onto the road such that the lane area is identified clearly.
 
-In function `process_vid()`, I drew the lane onto the warped blank image, warped the blank back to original image space using inverse perspective matrix (Minv), then combined the result with the original image.
+In function `detectLanesVideo()`, I drew the lane onto the warped blank image, warped the blank back to original image space using inverse perspective matrix (Minv), then combined the result with the original image.
 
 ![alt text][image7]
 
@@ -82,10 +80,9 @@ In function `process_vid()`, I drew the lane onto the warped blank image, warped
 
 #### 1. Advanced lane detection videos:
 
-Here's a [link to my video result](./result.mp4)
-
+Here's a [link to my video result](./result.mp4) or https://youtu.be/9tPfcH1N2D4
 ---
 
 ### Discussion
 
-The basic test was fine, the challenge and the hard challenge, does not perform well, mainly because shadowns and sharp curves where the right or left lane disapear from the image. I think more cameras are necessary to achieve satisfatory result for the challenges.
+The basic test was fine, the challenge and the hard challenge, does not perform well, mainly because shadows and sharp curves where the right or left lane disappear from the image. I think more cameras are necessary to achieve satisfactory result for the challenges.
