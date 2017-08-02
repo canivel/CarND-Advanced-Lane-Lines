@@ -81,10 +81,8 @@ In function `detectLanesVideo()`, I drew the lane onto the warped blank image, w
 #### 1. Advanced lane detection videos:
 
 Here's a [link to my video result](./result.mp4) or https://youtu.be/9tPfcH1N2D4
-
 ---
 
 ### Discussion
 
 The basic test was fine, the challenge and the hard challenge, does not perform well, mainly because shadows and sharp curves where the right or left lane disappear from the image. I think more cameras are necessary to achieve satisfactory result for the challenges.
-
