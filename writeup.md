@@ -82,7 +82,7 @@ In function `process_vid()`, I drew the lane onto the warped blank image, warped
 
 #### 1. Advanced lane detection videos:
 
-Here's a [link to my video result](./result.mp4)
+Here's the result https://youtu.be/9tPfcH1N2D4
 
 ---
 
